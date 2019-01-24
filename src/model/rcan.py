@@ -3,7 +3,14 @@
 from model import common
 
 import torch.nn as nn
-
+url = {
+    'r16f64x2': 'https://drive.google.com/file/d/1efDoKfnstK53XmsFOUijw345zGEAGKYs/view?usp=sharing',
+    'r16f64x3': 'https://cv.snu.ac.kr/research/EDSR/models/edsr_baseline_x3-abf2a44e.pt',
+    'r16f64x4': 'https://cv.snu.ac.kr/research/EDSR/models/edsr_baseline_x4-6b446fab.pt',
+    'r32f256x2': 'https://drive.google.com/file/d/1efDoKfnstK53XmsFOUijw345zGEAGKYs/view?usp=sharing',
+    'r32f256x3': 'https://cv.snu.ac.kr/research/EDSR/models/edsr_x3-ea3ef2c6.pt',
+    'r32f256x4': 'https://cv.snu.ac.kr/research/EDSR/models/edsr_x4-4f62e9ef.pt'
+}
 def make_model(args, parent=False):
     return RCAN(args)
 
