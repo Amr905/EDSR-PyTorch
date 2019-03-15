@@ -37,7 +37,7 @@ class EDSR(nn.Module):
             ) for _ in range(n_resblocks)
         ]
         m_body.append(conv(n_feats, n_feats, kernel_size))
-        m_body.append(conv(n_feats, n_feats, kernel_size))
+       # m_body.append(conv(n_feats, n_feats, kernel_size))
 
         # define tail module
         m_tail = [
