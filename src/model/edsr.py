@@ -33,7 +33,7 @@ class EDSR(nn.Module):
         # define body module
         m_body = [
             common.ResBlock(
-                conv, n_feats, kernel_size, act=act, res_scale=args.res_scale
+                conv, n_feats, kernel_size, act=act,conv,act=act, res_scale=args.res_scale
             ) for _ in range(n_resblocks)
         ]
         m_body.append(conv(n_feats, n_feats, kernel_size))
