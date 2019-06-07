@@ -44,7 +44,6 @@ class EDSR(nn.Module):
             common.Upsampler(conv, scale, n_feats, act=False),
             conv(n_feats, args.n_colors, kernel_size)
         ]
-
         self.head = nn.Sequential(*m_head)
         self.body = nn.Sequential(*m_body)
         self.tail = nn.Sequential(*m_tail)
@@ -58,7 +57,6 @@ class EDSR(nn.Module):
 
         x = self.tail(res)
         x = self.add_mean(x)
-
         return x 
 
     def load_state_dict(self, state_dict, strict=True):
